@@ -1,0 +1,30 @@
+<div class="d-flex justify-content-center">
+  <div class="card" style="width: 26rem">
+    <div class="card-body">
+      <h5 class="card-title mb-3">Login</h5>
+      <form [formGroup]="form" (submit)="onSubmit()">
+        <div class="mb-3">
+          <label for="email" class="form-label">Email Adress</label>
+          <input
+            type="email"
+            formControlName="email"
+            placeholder="Email Adress"
+            class="form-control"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="password" class="form-label">Password</label>
+          <input
+            type="password"
+            formControlName="password"
+            placeholder="Password"
+            class="form-control"
+          />
+        </div>
+        <button class="btn btn-success" type="submit" [disabled]="form.invalid">
+          Login
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
