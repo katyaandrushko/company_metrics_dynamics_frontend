@@ -1,0 +1,119 @@
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+
+}
+
+.half {
+    flex: 1;
+    min-width: 50%;
+    box-sizing: border-box;
+    padding: 10px;
+    margin-bottom: 50px;
+}
+
+.custom-table {
+
+    border-collapse: collapse;
+}
+
+.header-row {
+    background-color: rgba(129, 24, 0, 0.6);
+}
+
+.header-cell {
+    color: rgba(206, 191, 173, 1);
+    font-weight: bold;
+    padding: 8px;
+}
+
+.data-row {
+    background-color: rgba(206, 191, 173, 1);
+    /* Світло-коричневий колір для рядків даних */
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.data-row:hover {
+    background-color: rgba(182, 131, 119, 0.6);
+    color: wheat
+}
+
+.data-cell {
+    color: rgba(24, 24, 24, 1);
+    /* Чорний колір для тексту даних */
+    padding: 8px;
+}
+
+.no-data-row .mat-cell {
+    color: rgba(24, 24, 24, 1);
+    text-align: center;
+    padding: 8px;
+}
+
+
+@media (max-width: 1199.98px) {
+    .half {
+        min-width: 100%;
+    }
+}
+
+.filter-cont {
+    padding-top: 40px;
+    padding-bottom: 20px;
+}
+
+.picker_cont {
+    padding-left: 20px;
+}
+
+:host {
+    display: block;
+}
+
+.metric_name {
+    color: rgb(206, 191, 173);
+    font-size: 30px;
+    font-weight: 400;
+    text-align: center;
+    padding-top: 30px;
+}
+
+.canvasjs-chart {
+    width: 100%;
+
+
+}
+
+@media (max-width: 768px) {
+    .canvasjs-chart {
+        height: 240px;
+    }
+}
+
+@media (max-width: 480px) {
+    .canvasjs-chart {
+        height: 180px;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .filter_picker {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        padding-bottom: 40px;
+    }
+
+    .filter-cont {
+        width: 200px;
+    }
+
+    .picker_cont {
+        padding-left: 0px;
+    }
+}

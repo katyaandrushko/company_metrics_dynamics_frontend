@@ -1,0 +1,27 @@
+<!-- company-detail.component.html -->
+<mat-card *ngIf="company" class="company_detail">
+  <mat-card-title class="company_name">{{ company.name }}</mat-card-title>
+  <div class="img-container">
+    <img
+      mat-card-image
+      src="https://img.freepik.com/premium-vector/happy-people-welcome-newcomers_118813-8910.jpg"
+      alt="Photo of a Shiba Inu"
+      class="img"
+    />
+  </div>
+  <mat-card-content class="content-container">
+    <p class="description">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex minima ullam
+      culpa sed nostrum, facere distinctio molestiae eum quisquam, non eius
+      suscipit necessitatibus maiores voluptatum possimus nihil nesciunt dolore
+      libero, velit quo? Dicta cupiditate, at rem facere voluptatum nostrum non!
+    </p>
+    <p><strong>Bank Details:</strong> {{ company.bankDetails }}</p>
+    <p><strong>Phone:</strong> {{ company.phone }}</p>
+    <p><strong>Contact Person:</strong> {{ company.contactPerson }}</p>
+  </mat-card-content>
+</mat-card>
+
+<div *ngFor="let dataSource of dataSourceArray">
+  <app-metric [dataSource]="dataSource"></app-metric>
+</div>

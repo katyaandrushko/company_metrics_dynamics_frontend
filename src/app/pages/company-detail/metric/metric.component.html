@@ -1,0 +1,86 @@
+<h2 class="metric_name">{{ metric?.name }}</h2>
+<div class="container">
+  <div class="half">
+    <div class="filter_picker">
+      <mat-form-field class="filter-cont">
+        <mat-label class="filter">Filter by date</mat-label>
+        <input
+          matInput
+          (keyup)="applyFilter($event)"
+          placeholder="Ex. 2016"
+          #input
+        />
+      </mat-form-field>
+
+      <mat-form-field class="picker_cont" color="accent">
+        <mat-label>Enter a date range</mat-label>
+        <mat-date-range-input [rangePicker]="picker">
+          <input
+            matStartDate
+            (dateChange)="onStartDateChange($event)"
+            placeholder="Start date"
+            [(ngModel)]="startDate"
+          />
+          <input
+            matEndDate
+            (dateChange)="onEndDateChange($event)"
+            placeholder="End date"
+            [(ngModel)]="endDate"
+          />
+        </mat-date-range-input>
+        <mat-hint class="date">MM/DD/YYYY – MM/DD/YYYY</mat-hint>
+        <mat-datepicker-toggle
+          matIconSuffix
+          [for]="picker"
+        ></mat-datepicker-toggle>
+        <mat-date-range-picker #picker></mat-date-range-picker>
+      </mat-form-field>
+    </div>
+
+    <table
+      mat-table
+      [dataSource]="dataSource"
+      mat-elevation-z8
+      class="custom-table"
+    >
+      <ng-container matColumnDef="date" class="date">
+        <th mat-header-cell *matHeaderCellDef class="header-cell">Date</th>
+        <td mat-cell *matCellDef="let element" class="data-cell">
+          {{ formatDate(element.date) }}
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="value" class="value">
+        <th mat-header-cell *matHeaderCellDef class="header-cell">Value</th>
+        <td mat-cell *matCellDef="let element" class="data-cell">
+          {{ element.value }}
+        </td>
+      </ng-container>
+
+      <tr
+        mat-header-row
+        *matHeaderRowDef="displayedColumns"
+        class="header-row"
+      ></tr>
+      <tr
+        mat-row
+        *matRowDef="let row; columns: displayedColumns"
+        class="data-row"
+      ></tr>
+
+      <tr class="mat-row no-data-row" *matNoDataRow>
+        <td class="mat-cell" colspan="2">
+          No data matching the filter "{{ input.value }}"
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="half">
+    <canvasjs-chart
+      class="canvasjs-chart"
+      [options]="chartOptions"
+      [styles]="{ width: '100%', height: '360px' }"
+    ></canvasjs-chart>
+  </div>
+</div>
