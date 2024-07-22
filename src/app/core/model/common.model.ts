@@ -32,3 +32,10 @@ export interface Company {
   phone: string;
   contactPerson: string;
 }
+
+export interface Metric {
+  _id: string;
+  name: string;
+  importance: string;
+  measure: string;
+}
