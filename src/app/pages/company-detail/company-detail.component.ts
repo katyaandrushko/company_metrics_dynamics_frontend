@@ -1,13 +1,11 @@
 import { ChangeDetectorRef, Component, inject, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
-import { HttpClient } from '@angular/common/http';
-import { Company } from '../../../../api/src/company/CompanySchema';
+import { Company } from '../../core/model/common.model';
+import { MetricDynamics } from '../../core/model/common.model';
 import { MatCardModule } from '@angular/material/card';
 import { CompanyService } from '../../services/company.service';
 import { MetricsService } from '../../services/metrics.service';
-import { Metric } from '../../../../api/src/metrics/MetricSchema';
-import { MetricDynamics } from '../../../../api/src/metrics/MetricDynamicsSchema';
 import { MatTableDataSource, MatTableModule } from '@angular/material/table';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';

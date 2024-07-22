@@ -1,4 +1,3 @@
-// metric.component.ts
 import {
   ChangeDetectorRef,
   Component,
@@ -13,10 +12,9 @@ import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { FormsModule } from '@angular/forms';
-import { MetricDynamics } from '../../../../../api/src/metrics/MetricDynamicsSchema';
+import { MetricDynamics } from '../../../core/model/common.model';
 import { CanvasJSAngularChartsModule } from '@canvasjs/angular-charts';
-import { Metric } from '../../../../../api/src/metrics/MetricSchema';
-import { CompanyService } from '../../../services/company.service';
+import { Metric } from '../../../core/model/common.model';
 import { MetricsService } from '../../../services/metrics.service';
 @Component({
   selector: 'app-metric',

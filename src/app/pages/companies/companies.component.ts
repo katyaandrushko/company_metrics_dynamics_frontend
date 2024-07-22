@@ -1,13 +1,11 @@
-//
-
 import { Component, inject, OnInit } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { RouterLink } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { MatCardModule } from '@angular/material/card';
 import { MatToolbarModule } from '@angular/material/toolbar';
-import { Company } from '../../../../api/src/company/CompanySchema';
 import { CompanyService } from '../../services/company.service';
+import { Company } from '../../core/model/common.model';
 
 @Component({
   selector: 'app-companies',

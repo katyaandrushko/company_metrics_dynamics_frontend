@@ -8,10 +8,9 @@ import {
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 import { CompanyService } from '../../services/company.service';
-
 import { ActivatedRoute, Router } from '@angular/router';
 import { MatToolbarModule } from '@angular/material/toolbar';
-import { Company } from '../../../../api/src/company/CompanySchema';
+import { Company } from '../../core/model/common.model';
 
 @Component({
   selector: 'app-user-form',
@@ -32,16 +31,6 @@ export class CompanyFormComponent implements OnInit {
   router = inject(Router);
   route = inject(ActivatedRoute);
   editCompanyId?: string;
-
-  // constructor() {
-  //   this.userForm = this.formBuilder.group({
-  //     name: ['', [Validators.required]],
-  //     email: ['', [Validators.required, Validators.email]],
-  //     age: [''],
-  //     address: [''],
-  //     password: ['', [Validators.required, Validators.minLength(8)]],
-  //   });
-  // }
 
   constructor() {
     this.companyForm = this.formBuilder.group({

@@ -39,3 +39,11 @@ export interface Metric {
   importance: string;
   measure: string;
 }
+
+export interface MetricDynamics {
+  _id: string;
+  metricId: string;
+  companyId: string;
+  date: Date;
+  value: number;
+}
