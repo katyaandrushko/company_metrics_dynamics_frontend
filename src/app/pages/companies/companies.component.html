@@ -1,0 +1,53 @@
+<mat-toolbar color="primary" class="title">
+  <span>Global Enterprise Holdings</span>
+</mat-toolbar>
+
+<div class="main-content">
+  <mat-card color="primary" class="description-card">
+    <mat-card-title>Global Enterprise Holdings</mat-card-title>
+    <mat-card-content>
+      <p>
+        Global Enterprise Holdings is a leading conglomerate specializing in
+        diverse industries including technology, finance, and manufacturing. Our
+        mission is to drive innovation and excellence across all sectors we
+        operate in, ensuring sustainable growth and development.
+      </p>
+    </mat-card-content>
+    <div class="btn-container">
+      <button mat-raised-button class="btn" routerLink="/companies/add">
+        Add company
+      </button>
+    </div>
+  </mat-card>
+
+  <div class="companies-grid" color="primary">
+    <mat-card
+      class="company-card"
+      *ngFor="let comp of company; trackBy: trackByFn"
+      [routerLink]="'/companies/details/' + comp._id"
+    >
+      <mat-card-title>{{ comp.name }}</mat-card-title>
+      <mat-card-content>
+        <p><strong>Bank Details:</strong> {{ comp.bankDetails }}</p>
+        <p><strong>Phone:</strong> {{ comp.phone }}</p>
+        <p><strong>Contact Person:</strong> {{ comp.contactPerson }}</p>
+        <button
+          mat-raised-button
+          color="accent"
+          class="btn_edit"
+          [routerLink]="'/companies/' + comp._id"
+        >
+          Edit
+        </button>
+        <button
+          mat-raised-button
+          color="primary"
+          class="btn_delete"
+          (click)="delete(comp._id!)"
+        >
+          Delete
+        </button>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>
