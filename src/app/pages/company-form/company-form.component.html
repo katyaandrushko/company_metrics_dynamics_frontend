@@ -1,0 +1,26 @@
+<form
+  [formGroup]="companyForm"
+  (ngSubmit)="editCompanyId ? updateCompany() : addCompany()"
+  class="form_container"
+>
+  <mat-toolbar color="primary" class="title">Edit Company</mat-toolbar>
+
+  <mat-form-field class="forms">
+    <input matInput formControlName="name" placeholder="Name" />
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput formControlName="bankDetails" placeholder="Bank details" />
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput formControlName="phone" placeholder="Phone" />
+  </mat-form-field>
+  <mat-form-field>
+    <input
+      matInput
+      formControlName="contactPerson"
+      placeholder="Contact Person"
+    />
+  </mat-form-field>
+
+  <button mat-raised-button color="primary" type="submit">Submit</button>
+</form>
