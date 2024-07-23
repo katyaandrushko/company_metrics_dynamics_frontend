@@ -10,6 +10,7 @@ import { apiEndpoint } from '../constants/constants';
 import { map } from 'rxjs';
 import { LocalStorage } from '../constants/constants';
 import { Router } from '@angular/router';
+import { log } from 'console';
 
 @Injectable({
   providedIn: 'root',
@@ -25,10 +26,13 @@ export class AuthService {
   }
 
   register(payload: RegisterPayload) {
-    return this._http.post<ApiResponse<User>>(
+    let result = this._http.post<ApiResponse<User>>(
       `${apiEndpoint.Auth.Register}`,
       payload
     );
+    console.log(result);
+
+    return result;
   }
 
   login(payload: LoginPayload) {
@@ -51,7 +55,10 @@ export class AuthService {
   }
 
   getUserToken() {
-    return localStorage.getItem(LocalStorage.token);
+    if (typeof localStorage !== 'undefined') {
+      return localStorage.getItem(LocalStorage.token);
+    }
+    return null;
   }
 
   logout() {

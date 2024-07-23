@@ -30,10 +30,18 @@ export class RegisterComponent {
   }
 
   onSubmit() {
+    console.log(this.form.valid);
+
     if (this.form.valid) {
       this.authService.register(this.form.value).subscribe({
         next: (response) => {
-          this.router.navigate(['login']);
+          if (response.status) {
+            alert('User created successfully');
+            this.router.navigate(['login']);
+          }
+        },
+        error: () => {
+          alert('The user with this email is already exist');
         },
       });
     }

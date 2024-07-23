@@ -1,7 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { inject, Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Company } from '../core/model/common.model';
 import { MetricDynamics } from '../core/model/common.model';
 import { Metric } from '../core/model/common.model';
 

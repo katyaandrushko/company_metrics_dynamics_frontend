@@ -32,7 +32,13 @@ export class LoginComponent {
     if (this.form.valid) {
       this.authService.login(this.form.value).subscribe({
         next: (response) => {
-          this.router.navigate(['']);
+          if (response.status) {
+            alert('User created successfuly');
+            this.router.navigate(['']);
+          }
+        },
+        error: () => {
+          alert('Incorrect login or password');
         },
       });
     }
