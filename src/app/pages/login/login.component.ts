@@ -33,7 +33,6 @@ export class LoginComponent {
       this.authService.login(this.form.value).subscribe({
         next: (response) => {
           if (response.status) {
-            alert('User created successfuly');
             this.router.navigate(['']);
           }
         },

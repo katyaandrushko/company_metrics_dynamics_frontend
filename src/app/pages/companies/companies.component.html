@@ -26,7 +26,7 @@
       *ngFor="let comp of company; trackBy: trackByFn"
       [routerLink]="'/companies/details/' + comp._id"
     >
-      <mat-card-title>{{ comp.name }}</mat-card-title>
+      <mat-card-title class="card_title">{{ comp.name }}</mat-card-title>
       <mat-card-content>
         <p><strong>Bank Details:</strong> {{ comp.bankDetails }}</p>
         <p><strong>Phone:</strong> {{ comp.phone }}</p>
