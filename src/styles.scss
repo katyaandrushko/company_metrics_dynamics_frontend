@@ -130,10 +130,7 @@ $company_metrics_dynamics-theme: mat.define-light-theme((color: (primary: $compa
 
 
 @include mat.all-component-themes($company_metrics_dynamics-theme);
-
-
 @import 'bootstrap/scss/bootstrap';
-/* You can add global styles to this file, and also import other style files */
 
 html,
 body {
@@ -143,4 +140,5 @@ body {
 body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
+  background-color: rgba(24, 24, 24, 255);
 }
