@@ -1,6 +1,7 @@
 .company_detail {
     padding: 20px;
-    background-color: transparent;
+    background-color: #2b2a2a;
+    border-radius: 10px;
     color: rgba(206, 191, 173, 255);
 
 
@@ -22,6 +23,12 @@
             padding-top: 20px;
             width: 50%;
         }
+
+        @media (max-width: 768px) {
+            .description {
+                width: 80%;
+            }
+        }
     }
 
     .img-container {
@@ -34,6 +41,7 @@
             height: 250px;
             align-items: center;
             justify-content: center;
+
         }
     }
 }

@@ -1,11 +1,13 @@
 <h2 class="metric_name">{{ metric?.name }}</h2>
 <div class="container">
   <div class="half">
-    <canvasjs-chart
-      class="canvasjs-chart"
-      [options]="chartOptions"
-      [styles]="{ width: '100%', height: '360px' }"
-    ></canvasjs-chart>
+    <div class="canvas_container">
+      <canvasjs-chart
+        class="canvasjs-chart"
+        [options]="chartOptions"
+        [styles]="{ width: '100%', height: '360px' }"
+      ></canvasjs-chart>
+    </div>
   </div>
   <div class="half">
     <div class="filter_picker">

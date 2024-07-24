@@ -1,10 +1,6 @@
 .container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    text-align: center;
-    align-items: center;
-
 }
 
 .half {
@@ -16,7 +12,6 @@
 }
 
 .custom-table {
-
     border-collapse: collapse;
 }
 
@@ -32,7 +27,6 @@
 
 .data-row {
     background-color: rgba(206, 191, 173, 1);
-    /* Світло-коричневий колір для рядків даних */
     transition: background-color 0.3s, color 0.3s;
 }
 
@@ -43,7 +37,6 @@
 
 .data-cell {
     color: rgba(24, 24, 24, 1);
-    /* Чорний колір для тексту даних */
     padding: 8px;
 }
 
@@ -53,12 +46,6 @@
     padding: 8px;
 }
 
-
-@media (max-width: 1199.98px) {
-    .half {
-        min-width: 100%;
-    }
-}
 
 .filter-cont {
     padding-top: 40px;
@@ -83,24 +70,27 @@
 
 .canvasjs-chart {
     width: 100%;
-
-
 }
 
-@media (max-width: 768px) {
-    .canvasjs-chart {
-        height: 240px;
+.canvas_container {
+    padding-top: 140px;
+}
+
+@media (max-width: 1199.98px) {
+    .half {
+        min-width: 100%;
+    }
+
+    .canvas_container {
+        padding-top: 30px;
     }
 }
 
-@media (max-width: 480px) {
-    .canvasjs-chart {
-        height: 180px;
-    }
-}
 
 
 @media (max-width: 768px) {
+
+
     .filter_picker {
         display: flex;
         flex-direction: column;
@@ -115,5 +105,15 @@
 
     .picker_cont {
         padding-left: 0px;
+    }
+
+    .canvasjs-chart {
+        height: 240px;
+    }
+}
+
+@media (max-width: 480px) {
+    .canvasjs-chart {
+        height: 180px;
     }
 }

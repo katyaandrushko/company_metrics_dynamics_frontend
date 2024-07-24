@@ -6,13 +6,19 @@
 }
 
 .form_container {
-
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
 }
 
+
 mat-form-field {
     width: 30%;
+}
+
+@media (max-width: 1200px) {
+    mat-form-field {
+        width: 60%;
+    }
 }

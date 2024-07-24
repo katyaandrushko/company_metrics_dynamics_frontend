@@ -49,7 +49,7 @@ export class MetricComponent implements OnInit {
       animationEnabled: true,
       zoomEnabled: true,
       title: {
-        text: 'Market Capitalization of ACME Corp',
+        text: 'Dynamics of metrics changes',
       },
       axisY: {
         labelFormatter: (e: any) => {
@@ -111,7 +111,7 @@ export class MetricComponent implements OnInit {
         : true;
     };
     this.dataSource.filter = `${this.startDate}-${this.endDate}`;
-    this.cdr.detectChanges(); // Force update view after applying filter
+    this.cdr.detectChanges();
   }
 
   getDataForPlot() {

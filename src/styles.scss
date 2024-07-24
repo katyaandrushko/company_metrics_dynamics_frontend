@@ -139,6 +139,8 @@ body {
 
 body {
   margin: 0;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
+  // font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-family: "Roboto Mono", monospace;
+  font-optical-sizing: auto;
   background-color: rgba(24, 24, 24, 255);
 }
