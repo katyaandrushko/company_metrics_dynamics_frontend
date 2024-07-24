@@ -8,7 +8,8 @@ import { Metric } from '../core/model/common.model';
   providedIn: 'root',
 })
 export class MetricsService {
-  private apiUrl = 'http://localhost:5513/metrics/';
+  private apiUrl =
+    'https://github.com/katyaandrushko/company_metrics_dynamics_backend/metrics/';
   httpClient = inject(HttpClient);
 
   constructor(private http: HttpClient) {}

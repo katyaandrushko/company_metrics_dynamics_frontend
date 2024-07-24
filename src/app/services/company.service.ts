@@ -6,7 +6,8 @@ import { Company } from '../core/model/common.model';
   providedIn: 'root',
 })
 export class CompanyService {
-  private apiUrl = 'http://localhost:5513/companies/';
+  private apiUrl =
+    'https://github.com/katyaandrushko/company_metrics_dynamics_backend/companies/';
   httpClient = inject(HttpClient);
 
   constructor() {}

@@ -1,4 +1,3 @@
-import { HttpClient } from '@angular/common/http';
 import { inject, Injectable, signal } from '@angular/core';
 import {
   ApiResponse,
@@ -10,7 +9,7 @@ import { apiEndpoint } from '../constants/constants';
 import { map } from 'rxjs';
 import { LocalStorage } from '../constants/constants';
 import { Router } from '@angular/router';
-import { log } from 'console';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root',

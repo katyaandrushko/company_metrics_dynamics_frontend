@@ -1,4 +1,5 @@
-const apiUrl = 'http://localhost:5513/api';
+const apiUrl =
+  'https://github.com/katyaandrushko/company_metrics_dynamics_backend';
 
 export const apiEndpoint = {
   Auth: {
