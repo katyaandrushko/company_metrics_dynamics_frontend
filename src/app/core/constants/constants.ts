@@ -1,5 +1,4 @@
-const apiUrl =
-  'https://github.com/katyaandrushko/company_metrics_dynamics_backend';
+const apiUrl = 'https://company-metrics-dynamics-backend.onrender.com/api';
 
 export const apiEndpoint = {
   Auth: {

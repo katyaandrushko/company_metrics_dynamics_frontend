@@ -7,7 +7,7 @@ import { Company } from '../core/model/common.model';
 })
 export class CompanyService {
   private apiUrl =
-    'https://github.com/katyaandrushko/company_metrics_dynamics_backend/companies/';
+    'https://company-metrics-dynamics-backend.onrender.com/companies/';
   httpClient = inject(HttpClient);
 
   constructor() {}

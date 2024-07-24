@@ -9,7 +9,7 @@ import { Metric } from '../core/model/common.model';
 })
 export class MetricsService {
   private apiUrl =
-    'https://github.com/katyaandrushko/company_metrics_dynamics_backend/metrics/';
+    'https://company-metrics-dynamics-backend.onrender.com/metrics/';
   httpClient = inject(HttpClient);
 
   constructor(private http: HttpClient) {}
