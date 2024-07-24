@@ -1,11 +1,3 @@
-export interface User {
-  password: any;
-  age: any;
-  _id: string;
-  email: string;
-  name: string;
-}
-
 export interface LoginPayload {
   email: string;
   password: string;
@@ -23,6 +15,14 @@ export interface ApiResponse<T> {
   error?: string;
   token?: string;
   data: T;
+}
+
+export interface User {
+  password: any;
+  age: any;
+  _id: string;
+  email: string;
+  name: string;
 }
 
 export interface Company {

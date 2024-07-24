@@ -1,7 +1,6 @@
 import {
   ChangeDetectorRef,
   Component,
-  HostListener,
   inject,
   Input,
   OnInit,

@@ -1,22 +1,17 @@
 import { HttpClient } from '@angular/common/http';
 import { inject, Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
 import { MetricDynamics } from '../core/model/common.model';
 import { Metric } from '../core/model/common.model';
+import { apiEndpoint } from '../core/constants/constants';
 
 @Injectable({
   providedIn: 'root',
 })
 export class MetricsService {
-  private apiUrl =
-    'https://company-metrics-dynamics-backend.onrender.com/metrics/';
+  private apiUrl = apiEndpoint.Metrics;
   httpClient = inject(HttpClient);
 
   constructor(private http: HttpClient) {}
-
-  getMetricsForCompany(companyId: string): Observable<any[]> {
-    return this.http.get<any[]>(`/api/metrics/${companyId}`);
-  }
 
   getMetrics() {
     return this.httpClient.get<Metric[]>(this.apiUrl);

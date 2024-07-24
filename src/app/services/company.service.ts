@@ -2,12 +2,13 @@ import { HttpClient } from '@angular/common/http';
 import { inject, Injectable } from '@angular/core';
 import { Company } from '../core/model/common.model';
 
+import { apiEndpoint } from '../core/constants/constants';
+
 @Injectable({
   providedIn: 'root',
 })
 export class CompanyService {
-  private apiUrl =
-    'https://company-metrics-dynamics-backend.onrender.com/companies/';
+  private apiUrl = apiEndpoint.Companies;
   httpClient = inject(HttpClient);
 
   constructor() {}
